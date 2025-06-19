@@ -1,7 +1,4 @@
-import entities.Dipendente;
-import entities.DipendenteFullTime;
-import entities.DipendentePartTime;
-import entities.Dirigente;
+import entities.*;
 import entities.enums.Dipartimento;
 
 public class Main {
@@ -44,5 +41,12 @@ public class Main {
             totStipendi+=array[i].calculateSalary();
         }
         System.out.println("Il costo totale degli stipendi dei dipendenti è :" + totStipendi);
+
+        dF1.checkIn();
+        d1.checkIn();
+
+        Volontario v1 = new Volontario("Alessio",20,"Bello e Bravo");
+        v1.checkIn();
+
     }
 }

@@ -1,10 +1,11 @@
 package entities;
 
 import entities.enums.Dipartimento;
+import interfaces.checkToWork;
 import java.util.Random;
 
 
-public abstract class Dipendente {
+public abstract class Dipendente implements checkToWork {
 
     protected final int matricola;
     protected double stipendio;
@@ -32,7 +33,11 @@ public abstract class Dipendente {
 
     //METODI
     public abstract double calculateSalary();
-    //
+
+    @Override
+    public void checkIn(){
+        System.out.println("Il dipendente "+this.matricola+" è entrato a lavoro");
+    };
 
     @Override
     public String toString() {
